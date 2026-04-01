@@ -212,12 +212,12 @@ def get_heart_targets(num_drones, center_y=35.0, base_z=0.3, scale=0.1):
 # 3. 主运行程序
 # ==============================================================================
 if __name__ == "__main__":
-    NUM_DRONES = 16
+    NUM_DRONES = 20
 
-    # 1. 初始起飞点：Y = -3.0
+    # 1. 初始起飞点：Y = -2.0
     INIT_XYZS = np.zeros((NUM_DRONES, 3))
     for i in range(NUM_DRONES):
-        INIT_XYZS[i, :] = [(i % 4) * 0.6 - 0.9, -3.0 + (i // 4) * 0.6, 0.1]
+        INIT_XYZS[i, :] = [(i % 4) * 0.6 - 0.9, -2.0 + (i // 4) * 0.6, 0.1]
 
     # 2. 目标终点：Y = 25.0 (适中的距离，展现赛道感)
     TARGET_POS = get_heart_targets(NUM_DRONES, center_y=24.0, scale=0.12, base_z=0.4)
